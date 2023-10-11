@@ -2,7 +2,7 @@
 body: TextButton(
           child: const Text('click here'),
           onPressed: () {
-            print('button is tapped');
+            print('buttons is tapped');
           },
           onLongPress: () {
             print('longpressed');

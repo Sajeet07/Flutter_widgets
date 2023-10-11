@@ -1,5 +1,5 @@
 flutter scroll view
-step 1. column vitra container banara tyo vitra height, width,margin,color kk chainxa diyo ani tyo column lai single scroll view ley wrap gardesi column scroll hunxa
+step 1. column vitra container banara tyo vitra heights, width,margin,color kk chainxa diyo ani tyo column lai single scroll view ley wrap gardesi column scroll hunxa
 step 2. Row vitra container banara tyo vitra height, width,margin,color kk chainxa diyo ani tyo row lai single scroll view ley wrap gardesi ani tyo vitra scroll direction : axis horizontal dini ani scroll hunxa slider jasari
     body: Padding(
           padding: const EdgeInsets.all(24.0),

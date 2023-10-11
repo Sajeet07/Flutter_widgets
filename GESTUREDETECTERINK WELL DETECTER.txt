@@ -6,7 +6,7 @@ step 3: onTap/doubleTap etc func vitra k action display garni ho tei print garyo
  body: Center(
             child: InkWell(
           onTap: () {
-            print('Button is tapped');
+            print('Buttons is tapped');
           },
           child: Container(
             height: 200,
