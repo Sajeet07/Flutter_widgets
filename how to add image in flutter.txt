@@ -1,0 +1,3 @@
+Row widget is used to arrange widgets horizontally AND
+Column widget is used to arrange widget vertically
+1.Column is main axis and Row is cross axis 

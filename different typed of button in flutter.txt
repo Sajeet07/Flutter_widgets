@@ -1,0 +1,23 @@
+//FOR TEXT BUTTON
+body: TextButton(
+          child: const Text('click here'),
+          onPressed: () {
+            print('button is tapped');
+          },
+          onLongPress: () {
+            print('longpressed');
+          },
+//FOR ELEVATED BUTTON
+ body: ElevatedButton(
+          child: Text('Elevated button'),
+          onPressed: () {
+            print('elevated button is clicked');
+          },
+        )
+//FOR OUTLINED BUTTON
+body: OutlinedButton(
+          child: Text('outlined button'),
+          onPressed: () {
+            print('outlined button is clicked');
+          },
+        )

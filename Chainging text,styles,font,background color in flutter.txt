@@ -1,0 +1,6 @@
+const Text("Hello world",
+            style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontSize: 25,
+                backgroundColor: Color.fromRGBO(0, 99, 133, 0.965)))
