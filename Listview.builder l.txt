@@ -1,0 +1,27 @@
+//Listview.builder ley API through jati pani item haru aauna sakxa whether it is 1,2 or 1000 tei anusar item build gardinxa dynamically
+//And its next use is user ley j pani scroll garxa tyo mathi widgets haru destroy hudai janxa tala baata aauni new widgets haru add hudai janxa
+
+@override
+  Widget build(BuildContext context) {
+    List arrnames = [
+      'suman',
+      'arpan',
+      'sajit',
+      'nabin',
+      'jason',
+      'Rajan',
+      'Shyam'
+    ];
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('Hello'),
+        ),
+        body: ListView.builder(
+            itemCount: arrnames.length,
+            itemExtent: 100,
+            itemBuilder: (context, index) {
+              return Text(
+                arrnames[index],
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+              );
+            }));

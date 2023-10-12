@@ -1,0 +1,30 @@
+ @override
+  
+//Listview ley list haru lai separate garera margin haldinxa plus separatorBuilder  listview.Builder ma matra painxa
+//separator builder lagauda return ni garna parxa
+Widget build(BuildContext context) {
+    List arrnames = [
+      'suman',
+      'arpan',
+      'sajit',
+      'nabin',
+      'jason',
+      'Rajan',
+      'Shyam'
+    ];
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('Hello'),
+        ),
+        body: ListView.separated(
+            itemCount: arrnames.length,
+            // itemExtent: 100,
+            separatorBuilder: (context, index) {
+              return Divider(height: 100, thickness: 2);
+            },
+            itemBuilder: (context, index) {
+              return Text(
+                arrnames[index],
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+              );
+            }));
