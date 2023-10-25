@@ -1,0 +1,35 @@
+//ListTile means contacts,messenger haru ko design banauna use hunxa.
+//yesma ma chaini main components vaneko Leading(includes: circle avatar,numbering),Title(includes, names haru huni vayo),Subtitle(number,email etc ) and last trailoring.
+
+ @override
+  Widget build(BuildContext context) {
+    List arrnames = [
+      'suman',
+      'arpan',
+      'sajit',
+      'nabin',
+      'jason',
+      'Rajan',
+      'Shyam'
+    ];
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('Hello'),
+        ),
+        body: ListView.separated(
+          itemBuilder: (context, index) {
+            return ListTile(
+              leading: Text("${index + 1}"),
+              title: Text(arrnames[index]),
+              subtitle: Text('Number'),
+              trailing: Icon(Icons.add),
+            );
+          },
+          itemCount: arrnames.length,
+          separatorBuilder: (context, index) {
+            return Divider(
+              height: 100,
+              thickness: 1,
+            );
+          },
+        ));
