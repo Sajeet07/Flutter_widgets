@@ -1,0 +1,93 @@
+//FETCHING DATA FROM TEXTFIELD USING TEXTEDITIING CONTROLLER
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  var emailText =
+      TextEditingController(); //it takes the value whatever the user entered in textfield
+  var passText = TextEditingController();
+  bool show = false;  step:1  //obsureText bool type matra hunxa tei vara hame show vanni bool var banako
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+          appBar: AppBar(
+            title: const Text('Hello'),
+          ),
+          body: Center(
+            child: Padding(
+              padding: const EdgeInsets.all(18.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  TextField(
+                    controller: emailText,
+                    obscureText: show,  step:2 //yesle paila email lai unhide garexa (bool show = false xa)
+                    decoration: InputDecoration(
+                        hintText: "Enter email",
+                        suffixIcon: IconButton(
+                            icon: const Icon(
+                              Icons.remove_red_eye,
+                              color: Colors.deepOrange,
+                            ),
+                            onPressed: () {
+                              setState(() {
+                                show = !show; step 3: hide vaye unhide and unhide vaye hide garni vaneko
+                              });
+                            }),
+                        prefixIcon: IconButton(
+                            icon: const Icon(
+                              Icons.email,
+                              color: Colors.deepOrange,
+                            ),
+                            onPressed: () {}),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20),
+                          borderSide:
+                              const BorderSide(color: Colors.red, width: 2),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20),
+                          borderSide:
+                              const BorderSide(color: Colors.blue, width: 2),
+                        )),
+                  ),
+                  Container(
+                    height: 10,
+                  ),
+                  TextField(
+                    controller: passText,
+                    obscureText:
+                        true, //this func is used to hide the text or password
+                    decoration: InputDecoration(
+                      hintText: "Enter Password",
+                      focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20),
+                          borderSide:
+                              const BorderSide(color: Colors.red, width: 2)),
+                    ),
+                  ),
+                  ElevatedButton(
+                      onPressed: () {
+                        String uEmail = emailText.text.toString();
+                        String uPass = passText.text;
+                        print("Email = $uEmail, Pass = $uPass");
+                      },
+                      child: const Text("LOGIN"))
+                ],
+              ),
+            ),
+          )),
+    );
+  }
+}
